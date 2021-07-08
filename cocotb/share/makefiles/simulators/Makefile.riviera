@@ -145,7 +145,7 @@ endif
 $(COCOTB_RESULTS_FILE): $(SIM_BUILD)/runsim.tcl $(CUSTOM_COMPILE_DEPS) $(CUSTOM_SIM_DEPS)
 	-@rm -f $(COCOTB_RESULTS_FILE)
 
-	set -o pipefail; GPI_EXTRA=$(GPI_EXTRA) TOPLEVEL_LANG=$(TOPLEVEL_LANG) \
+	set -o pipefail; $(SIM_ENV) GPI_EXTRA=$(GPI_EXTRA) TOPLEVEL_LANG=$(TOPLEVEL_LANG) \
 	MODULE=$(MODULE) TESTCASE=$(TESTCASE) TOPLEVEL=$(TOPLEVEL) $(CMD) $(RUN_ARGS) -do $(SIM_BUILD)/runsim.tcl | tee $(SIM_BUILD)/sim.log
 
 	$(call check_for_results_file)

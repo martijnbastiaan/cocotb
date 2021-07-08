@@ -292,6 +292,16 @@ The following variables are makefile variables, not environment variables.
       to set the random seed value if :envvar:`RANDOM_SEED` is not set.
       If both ``+ntb_random_seed`` and ``+seed`` are set, ``+ntb_random_seed`` is used.
 
+.. make:var:: SIM_ENV
+
+      Environment variables to pass to execution stage of compiled simulation
+
+      Although this variable can be used for any simulator, its existence is motivated by
+      `issue #644 <https://github.com/cocotb/cocotb/issues/644>`_. To work around that issue,
+      users have to either modify a system wide Xcelium installation or patch cocotb to pass
+      ``LD_PRELOAD`` to ``xrun``. With this option, users can set ``SIM_ENV := LD_PRELOAD="foo.so bar.so"``
+      in their Makefiles instead.
+
 .. make:var:: COCOTB_HDL_TIMEUNIT
 
       The default time unit that should be assumed for simulation when not specified by modules in the design.
