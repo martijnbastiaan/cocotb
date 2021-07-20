@@ -7,6 +7,9 @@ MODULE := test_ab
 
 ifneq ($(filter $(SIM),xcelium),)
     COMPILE_ARGS += -v93
+endif
+
+ifneq ($(filter questa modelsim xcelium,$(shell echo $(SIM) | tr A-Z a-z)),)
     VHDL_LIB_ORDER := blib
 endif
 

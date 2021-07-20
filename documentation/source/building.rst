@@ -267,7 +267,7 @@ The following variables are makefile variables, not environment variables.
 
 .. make:var:: VHDL_LIB_ORDER
 
-      Order in which VHDL libraries should be compiled (Xcelium only)
+      Order in which VHDL libraries should be compiled (ModelSim/Questa/Xcelium only)
 
 .. make:var:: COMPILE_ARGS
 
