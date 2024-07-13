@@ -91,7 +91,6 @@ log.addHandler(handler)
 
 setup(
     name="cocotb",
-    cmdclass={"build_ext": build_ext},
     version=__version__,
     description="cocotb is a coroutine based cosimulation library for writing VHDL and Verilog testbenches in Python.",
     url="https://www.cocotb.org",
@@ -107,15 +106,6 @@ setup(
     python_requires=">=3.6",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
-    package_data={
-        "cocotb": (
-            package_files("src/cocotb/share/include")
-            + package_files("src/cocotb/share/def")
-            + package_files("src/cocotb/share/lib/verilator")
-        ),
-        "cocotb_tools": (package_files("src/cocotb_tools/makefiles")),
-    },
-    ext_modules=get_ext(),
     entry_points={
         "console_scripts": [
             "cocotb-config=cocotb_tools.config:main",
