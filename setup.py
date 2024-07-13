@@ -42,7 +42,7 @@ now = int(time.time())
 __version__ = f"2.0.0.dev{now}"
 
 setup(
-    name="cocotb",
+    name="cocotbb",
     version=__version__,
     description="cocotb is a coroutine based cosimulation library for writing VHDL and Verilog testbenches in Python.",
     url="https://www.cocotb.org",
@@ -57,7 +57,7 @@ setup(
     package_dir={"": "src"},
     entry_points={
         "console_scripts": [
-            "cocotb-main=cocotb.main:main",
+            "cocotbb-main=cocotb.main:main",
         ]
     },
 )
