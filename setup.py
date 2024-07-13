@@ -28,21 +28,6 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ###############################################################################
 
-import sys
-
-if sys.version_info[:2] < (3, 6):  # noqa: UP036 | bug in ruff
-    msg = [
-        "This version of cocotb requires at least Python 3.6,",
-        "you are running Python %d.%d.%d."
-        % (sys.version_info[0], sys.version_info[1], sys.version_info[2]),
-    ]
-    msg += [
-        "For more information please refer to the documentation at ",
-        "https://cocotb.readthedocs.io.",
-    ]
-
-    raise SystemExit("\n".join(msg))
-
 from os import path
 
 from setuptools import find_packages, setup
