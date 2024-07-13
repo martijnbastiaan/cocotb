@@ -57,7 +57,7 @@ setup(
     package_dir={"": "src"},
     entry_points={
         "console_scripts": [
-            "cocotbb-main=cocotb.main:main",
+            "cocotbb-main=cocotbb.main:main",
         ]
     },
 )
