@@ -108,7 +108,7 @@ setup(
     package_dir={"": "src"},
     entry_points={
         "console_scripts": [
-            "cocotb-config=cocotb_tools.config:main",
+            "cocotb-main=cocotb.main:main",
         ]
     },
     platforms="any",
